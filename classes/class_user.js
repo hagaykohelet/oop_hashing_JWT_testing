@@ -11,7 +11,7 @@ export default class userdal {
         }
         return data
     }
-    static add = async function (obj) {
+    static add = async  function (obj) {
         const { error } = await supabase.from("user").insert(obj).select()
         if (error) {
             return error
